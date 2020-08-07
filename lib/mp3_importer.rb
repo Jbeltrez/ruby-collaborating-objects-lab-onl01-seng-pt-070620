@@ -1,3 +1,4 @@
+require 'pry'
 class MP3Importer 
   attr_accessor :path 
   def initialize(path)
@@ -5,6 +6,7 @@ class MP3Importer
   end 
   def files
     @files = Dir.entries(@path)
+    binding.pry
   end 
   def import 
     Song.new_by_filename(some_filename)
