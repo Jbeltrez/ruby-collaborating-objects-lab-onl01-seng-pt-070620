@@ -6,6 +6,7 @@ class MP3Importer
   end 
   def files
     @files = Dir.entries(@path)
+    @files.delete_if 
     binding.pry
   end 
   def import 
